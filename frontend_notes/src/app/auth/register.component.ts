@@ -5,7 +5,7 @@ import { SupabaseService } from '../core/supabase.service';
 
 /* global setTimeout */
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,11 +17,16 @@ export class RegisterComponent {
   loading = false;
   success = false;
 
-  constructor(fb: FormBuilder, private supabase: SupabaseService, private router: Router) {
+  private supabase: SupabaseService;
+  private router: Router;
+
+  constructor(fb: FormBuilder, supabase: SupabaseService, router: Router) {
     this.form = fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+    this.supabase = supabase;
+    this.router = router;
   }
 
   async submit() {

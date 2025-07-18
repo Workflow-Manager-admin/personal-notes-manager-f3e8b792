@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SupabaseService } from '../core/supabase.service';
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SupabaseService } from '../core/supabase.service';
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 @Component({
   selector: 'app-notes-shell',
   templateUrl: './notes-shell.component.html',

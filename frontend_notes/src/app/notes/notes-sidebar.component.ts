@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SupabaseService, Note } from '../core/supabase.service';
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 @Component({
   selector: 'app-notes-sidebar',
   templateUrl: './notes-sidebar.component.html',

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupabaseService } from '../core/supabase.service';
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 @Component({
   selector: 'app-note-edit',
   templateUrl: './note-edit.component.html',
