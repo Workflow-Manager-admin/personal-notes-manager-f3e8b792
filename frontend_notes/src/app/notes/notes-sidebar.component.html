@@ -1,0 +1,23 @@
+<nav class="sidebar-nav">
+  <div class="sidebar-header">
+    <input
+      type="search"
+      [(ngModel)]="search"
+      (keyup.enter)="searchNotes()"
+      placeholder="Search notes…"
+      spellcheck="false"
+      class="search-input"
+    />
+    <button class="add-btn" (click)="newNote()" aria-label="Add note">+</button>
+  </div>
+  <div class="notes-list">
+    <div class="note-item"
+      *ngFor="let note of notes"
+      (click)="goTo(note.id)">
+      <span>{{ note.title || "Untitled note" }}</span>
+      <span class="note-date">{{ note.created_at | date:'short' }}</span>
+    </div>
+    <div *ngIf="notes.length === 0 && !loading" class="no-notes">No notes found.</div>
+    <div *ngIf="loading" class="loading">Loading…</div>
+  </div>
+</nav>

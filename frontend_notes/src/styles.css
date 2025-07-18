@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #1976d2;
+  --secondary: #424242;
+  --accent: #ffc107;
+  --sidebar-bg: #f8fafc;
+  --content-bg: #fff;
+  --header-bg: #f7f8fa;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--secondary);
+}
+
+body {
+  background: #f8fafc;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter Tight', Inter, Arial, sans-serif;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}

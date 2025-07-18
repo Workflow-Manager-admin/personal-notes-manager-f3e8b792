@@ -1,0 +1,15 @@
+<div class="notes-layout">
+  <aside class="sidebar">
+    <app-notes-sidebar></app-notes-sidebar>
+  </aside>
+  <div class="main-content">
+    <header class="header">
+      <div class="logo-title">
+        <span class="logo-icon"></span>
+        <h1>My Notes</h1>
+      </div>
+      <button (click)="logout()" class="logout-btn">Logout</button>
+    </header>
+    <router-outlet></router-outlet>
+  </div>
+</div>

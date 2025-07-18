@@ -1,0 +1,12 @@
+<div *ngIf="loading" class="note-content loading">Loading…</div>
+<div *ngIf="error" class="note-content error">{{ error }}</div>
+<div *ngIf="!loading && note" class="note-view-wrap">
+  <div class="note-title">{{ note.title || "Untitled note" }}</div>
+  <div class="note-content">
+    {{ note.content }}
+  </div>
+  <div class="note-actions">
+    <button class="edit-btn" (click)="edit()">Edit</button>
+    <button class="delete-btn" (click)="delete()">Delete</button>
+  </div>
+</div>

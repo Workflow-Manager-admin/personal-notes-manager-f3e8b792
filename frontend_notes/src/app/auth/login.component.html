@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Sign in</h2>
+  <input type="email" formControlName="email" placeholder="Email address" autocomplete="email" required />
+  <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password" required />
+  <button type="submit" [disabled]="loading">
+    {{ loading ? "Signing in..." : "Login" }}
+  </button>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <a routerLink="/auth/register">Don't have an account? Register</a>
+</form>

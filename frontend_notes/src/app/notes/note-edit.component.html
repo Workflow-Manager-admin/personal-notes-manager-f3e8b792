@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="note-edit-form">
+  <h2>{{ noteId ? "Edit Note" : "New Note" }}</h2>
+  <input type="text" formControlName="title" placeholder="Title" required />
+  <textarea formControlName="content" placeholder="Write your note..."></textarea>
+  <button type="submit" [disabled]="submitting">
+    {{ submitting ? "Saving..." : (noteId ? "Update" : "Create") }}
+  </button>
+  <div *ngIf="error" class="error">{{ error }}</div>
+</form>

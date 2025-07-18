@@ -1,0 +1,137 @@
+/* CSS Variables for main theme */
+:root {
+  --primary: #1976d2;
+  --secondary: #424242;
+  --accent: #ffc107;
+  --sidebar-bg: #f8fafc;
+  --content-bg: #fff;
+  --header-bg: #f7f8fa;
+}
+.notes-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+}
+.sidebar {
+  width: 290px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid #e0e0e0;
+  min-height: 100vh;
+  padding: 0;
+  display: flex; flex-direction: column;
+}
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* experiment with spacing */
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1rem 0.8rem;
+  border-bottom: 1px solid #e4e8ef;
+  background: var(--sidebar-bg);
+}
+.search-input {
+  flex: 1;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  background: #fff;
+}
+.add-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+.notes-list {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0.3rem 0.6rem;
+}
+.note-item {
+  padding: 0.65rem 0.6rem 0.65rem 1rem;
+  border-radius: 0.6rem;
+  background: transparent;
+  cursor: pointer;
+  color: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: background 0.17s;
+  font-size: 1.03rem;
+  margin-top: 0.35rem;
+}
+.note-item:hover, .note-item.selected {
+  background: #e3f1fd;
+  color: var(--primary);
+}
+.note-date {
+  font-size: 0.87rem;
+  color: #8591a5;
+  margin-left: 0.5rem;
+}
+.no-notes,
+.loading {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  padding: 2.2rem 0 0 0;
+}
+.main-content {
+  flex: 1;
+  background: var(--content-bg);
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+.header {
+  height: 56px;
+  background: var(--header-bg);
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+  z-index: 21;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  background: var(--primary);
+  border-radius: 7px;
+  display: inline-block;
+}
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.32rem;
+  transition: background 0.17s;
+}
+.logout-btn:hover {
+  background: #e3e3f8;
+}
+
+@media (max-width: 768px) {
+  .notes-layout { flex-direction: column; }
+  .sidebar { width: 100vw; min-height: unset; border-right: none; border-bottom: 1px solid #e0e0e0;}
+  .main-content { min-height: unset; }
+}
